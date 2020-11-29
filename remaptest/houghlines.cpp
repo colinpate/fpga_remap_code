@@ -22,6 +22,7 @@ using namespace std;
 #define block_width_deg float(frame_width_deg / fr_cols / 2)
 #define block_height_deg float(frame_height_deg / fr_rows)
 #define param_scale float(1536.f / 960.f)
+#define read_offset float(300)
 
 static void help()
 {
@@ -146,7 +147,7 @@ int main(int argc, char** argv)
                 
 
                 float x_read = max(0.f, xa);
-                x_read = min(2048.f, x_read * param_scale); // Calibrated with half-sized images.
+                x_read = min(2048.f, (x_read * param_scale) + read_offset); // Calibrated with half-sized images.
                 //x_read = min(2048.f, x_read);
                 float y_read = max(0.f, ya);
                 y_read = min(1530.f, y_read * param_scale); // Calibrated with half-sized images.
