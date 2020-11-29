@@ -1,0 +1,8 @@
+*.png
+*.o
+*/houghlines_led.cpp
+example
+face_detection
+camera_in
+*/houghlines
+*/ar0330
