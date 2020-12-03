@@ -299,7 +299,7 @@ int main(){
             if (this_cam.analog_gain < (AR0330_ANALOG_GAIN_MAX - AR0330_ANALOG_GAIN_INC)) {
                 this_cam.analog_gain += AR0330_ANALOG_GAIN_INC;
             //} else if (this_cam.global_gain < (AR0330_GLOBAL_GAIN_MAX - AR0330_GLOBAL_GAIN_INC)) {
-            } else if (this_cam.global_gain < (3000 - AR0330_GLOBAL_GAIN_INC)) {
+            } else if (this_cam.global_gain < (2000 - AR0330_GLOBAL_GAIN_INC)) {
                 this_cam.global_gain += AR0330_GLOBAL_GAIN_INC;
             } else {
                 break;
