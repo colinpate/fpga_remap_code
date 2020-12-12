@@ -266,6 +266,7 @@ int main(){
     }
     
     int good_count = 0;
+    int total_reps = 0;
     
     while (1){
         usleep(500000); // 500ms
@@ -310,6 +311,10 @@ int main(){
         		break;
         	}
         }
+        total_reps++;
+        if (total_reps > 100){
+        	break;
+	}	
         
         //cout << "\n\nSetting exposure " << dec << this_cam.exposure;
         //ar0330_set_exposure(&this_cam);
